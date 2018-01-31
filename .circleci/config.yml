@@ -16,7 +16,7 @@ jobs:
     
     steps:
       - checkout
-      - run: ll
+      - run: ls -la
       - run: ls -la ~/.ssh/
 
 
