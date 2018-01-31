@@ -18,6 +18,7 @@ jobs:
       - checkout
       - run: ls -la
       - run: ls -la ~/.ssh/
+      - run: cat ~/.ssh/known_hosts
 
 
 
