@@ -3,6 +3,15 @@
 # Check https://circleci.com/docs/2.0/language-java/ for more details
 #
 version: 2
+
+machine:
+  services:
+    - docker
+  post:
+    - chmod +x ~/circleci-tunnel.sh
+    - ~/circleci-tunnel.sh start:
+        background: true
+
 jobs:
   build:
     docker:
