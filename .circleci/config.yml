@@ -16,13 +16,13 @@ jobs:
 
     #working_directory: ~/repo
 
-    #environment:
+    environment:
       # Customize the JVM maximum heap limit
-     # MAVEN_OPTS: -Xmx3200m
+      MAVEN_OPTS: -Xmx3200m
     
-    #steps:
-     # - checkout
-     # - run: echo "hello world"
+    steps:
+      - checkout
+      - run: echo "hello world"
       # Download and cache dependencies
       #- restore_cache:
       #    keys:
