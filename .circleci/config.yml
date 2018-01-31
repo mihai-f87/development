@@ -17,7 +17,7 @@ jobs:
     steps:
       - checkout
       - run: echo "hello world"
-      - run: ls -la ~/.ssh/
+      - run: ssh -i ~/.ssh/id_rsa -t jenkins@82.94.162.78 "touch mihai/fisier_test"
 
 
 
