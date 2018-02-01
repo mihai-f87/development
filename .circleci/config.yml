@@ -22,7 +22,6 @@ jobs:
             - "10:02:93:e1:38:8e:b5:6d:59:e7:a2:59:9e:6f:7a:3c"
       - run: ls -la
       - run: ls -la ~/.ssh/
-#      - run: cat ~/.ssh/id_rsa_ba6e00e07bf4ebea320068750615ef7b
-#      - run: ssh -i ~/.ssh/id_rsa_ba6e00e07bf4ebea320068750615ef7b -t jenkins@82.94.162.78 ls
+      - run: ssh -i ~/.ssh/id_rsa_100293e1388eb56d59e7a2599e6f7a3c -t jenkins@82.94.162.78 ls
 
 
