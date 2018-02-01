@@ -4,14 +4,6 @@
 #
 version: 2
 
-machine:
-  services:
-    - docker
-  post:
-    - chmod +x ~/circleci-tunnel.sh
-    - ~/circleci-tunnel.sh start:
-        background: true
-
 jobs:
   build:
     docker:
@@ -27,10 +19,10 @@ jobs:
       - checkout
       - add_ssh_keys:
           fingerprints:
-            - "ba:6e:00:e0:7b:f4:eb:ea:32:00:68:75:06:15:ef:7b"
+            - "10:02:93:e1:38:8e:b5:6d:59:e7:a2:59:9e:6f:7a:3c"
       - run: ls -la
       - run: ls -la ~/.ssh/
-      - run: cat ~/.ssh/id_rsa_ba6e00e07bf4ebea320068750615ef7b
-      - run: ssh -i ~/.ssh/id_rsa_ba6e00e07bf4ebea320068750615ef7b -t jenkins@82.94.162.78 ls
+#      - run: cat ~/.ssh/id_rsa_ba6e00e07bf4ebea320068750615ef7b
+#      - run: ssh -i ~/.ssh/id_rsa_ba6e00e07bf4ebea320068750615ef7b -t jenkins@82.94.162.78 ls
 
 
