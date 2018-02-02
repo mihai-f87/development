@@ -21,8 +21,8 @@ jobs:
           fingerprints:
             - "10:02:93:e1:38:8e:b5:6d:59:e7:a2:59:9e:6f:7a:3c"
       - run: ls -la
-      - run: rm circleci-tunnel.sh
       - run: wget https://gist.githubusercontent.com/gianrubio/dce37ee9b9c024937832d776597e2603/raw/4cdb30e5075e8e6064ac48a258e05f518f8c88c0/circleci-tunnel.sh ~/
+      - run: ls -la
 #      - run: ssh -t jenkins@82.94.162.78 ls
 
 
