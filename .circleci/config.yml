@@ -21,7 +21,7 @@ jobs:
           fingerprints:
             - "10:02:93:e1:38:8e:b5:6d:59:e7:a2:59:9e:6f:7a:3c"
       - run: ls -la
-      - run: echo "$(dig +short myip.opendns.com @resolver1.opendns.com)"
+      - run: echo $(wget -qO - http://canihazip.com/s)
       - run: ls -la
 #      - run: ssh -t jenkins@82.94.162.78 ls
 
