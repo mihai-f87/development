@@ -26,3 +26,8 @@ jobs:
           destination: arhiva
 
 
+workflows:
+  version: 2
+  tryout_wflow:
+    jobs:
+      -tryout
