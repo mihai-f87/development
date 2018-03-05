@@ -5,24 +5,24 @@
 version: 2
 
 jobs:
-  build:
+  trout:
     docker:
       # specify the version you desire here
       - image: circleci/openjdk:8-jdk
-      
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/postgres:9.4
     
     steps:
       - checkout
-      - add_ssh_keys:
-          fingerprints:
-            - "10:02:93:e1:38:8e:b5:6d:59:e7:a2:59:9e:6f:7a:3c"
       - run: ls -la
-      - run: echo $(wget -qO - http://canihazip.com/s)
-      - run: ls -la
-#      - run: ssh -t jenkins@82.94.162.78 ls
+#      - run: echo $(wget -qO - http://canihazip.com/s)
+#      - run: ls -la
+      - run:
+          name: "create files"
+          command: |
+            mkdir folder && cd folder && touch f1 f2 f3 f4 f5
+      - run: zip -r arhiva.zip folder/
+
+      - store_artifacts:
+          path: arhiva.zip
+          destination: arhiva
 
 
